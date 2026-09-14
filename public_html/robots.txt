@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.metrea.com.br/sitemap.xml

@@ -1,0 +1,30 @@
+{
+  "cliente": "metrea",
+  "titulo": "Métrea — Sistemas construtivos de alto padrão",
+  "setor": "materiais e sistemas construtivos a seco (fachadas ventiladas HPL/Trespa, divisorias sanitarias, revestimento HPL, lockers), Sao Paulo/SP",
+  "atualizado_em": "2026-09-14",
+  "etapa_atual": 8,
+  "etapas": [
+    {"n": 1, "nome": "extrair-drive", "status": "done"},
+    {"n": 2, "nome": "scaffold-projeto", "status": "done"},
+    {"n": "2b", "nome": "repo-github", "status": "done"},
+    {"n": 3, "nome": "design-system", "status": "done"},
+    {"n": 4, "nome": "extrair-copy", "status": "done"},
+    {"n": 5, "nome": "gerar-frontend", "status": "done"},
+    {"n": 6, "nome": "ajustes-imagens-responsivo", "status": "done"},
+    {"n": 7, "nome": "modulos-lgpd-tags", "status": "done", "obs": "banner de cookies + consent no dataLayer + politica de privacidade instalados; tags GTM/GA4/Pixel puladas (sem IDs)"},
+    {"n": 8, "nome": "revisao-humana", "status": "pending"},
+    {"n": 9, "nome": "deploy", "status": "blocked"}
+  ],
+  "pendencias": [
+    {"tipo": "whatsapp", "desc": "Numero de WhatsApp real para o CTA. Placeholder no codigo: 5511XXXXXXXXX. Telefone fixo conhecido: (11) 2548-1555.", "bloqueia": "CTA funcional"},
+    {"tipo": "tags", "desc": "IDs de GTM/GA4/Meta Pixel/Ads nao fornecidos. Tags puladas; instalar quando houver IDs.", "bloqueia": "analytics"},
+    {"tipo": "deploy", "desc": "Dominio e secrets (FTP/Vercel). Pastas de deploy preparadas; publicacao e gate humano.", "bloqueia": "producao"}
+  ],
+  "links": {
+    "drive": "https://drive.google.com/drive/folders/158mVG2B2ENTokcDgcia9vOqMaTo1bXH3",
+    "repo": "",
+    "preview": "",
+    "dominio": "www.metrea.com.br"
+  }
+}

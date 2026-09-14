@@ -1,0 +1,20 @@
+# BuildV — versiona só o entregável (pasta de deploy) + estado.
+# Material-fonte fica local + Drive.
+_raw/
+imgs/
+node_modules/
+Marca/
+Copys/
+design-system/
+Site/
+_deploy_assets/
+_painel/
+*.log
+.DS_Store
+Thumbs.db
+preview-server.js
+db-config.php
+
+# secrets nunca versionados
+*.env
+.env*
