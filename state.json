@@ -23,8 +23,8 @@
   ],
   "links": {
     "drive": "https://drive.google.com/drive/folders/158mVG2B2ENTokcDgcia9vOqMaTo1bXH3",
-    "repo": "",
-    "preview": "",
+    "repo": "https://github.com/dev-buildv/metrea-site",
+    "preview": "local: node preview-server.js -> http://localhost:5599",
     "dominio": "www.metrea.com.br"
   }
 }

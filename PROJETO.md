@@ -19,12 +19,12 @@ azul-profundo #054C72 sobre off-white arquitetônico e navy. Evita o clichê rep
 ## Checklist de etapas
 - [x] 1. Extrair do Drive (marca, copy, fotos curadas) — via rclone/MCP
 - [x] 2. Organizar pastas + PROJETO.md/state.json
-- [ ] 2b. Repositório GitHub `dev-buildv/metrea-site` (privado)
+- [x] 2b. Repositório GitHub `dev-buildv/metrea-site` (privado)
 - [x] 3. Design system (paleta/tipografia/tokens + direcao-estilo)
 - [x] 4. Copy estruturada (fonte: apresentação comercial + ebook fachada + projetos)
-- [ ] 5. Front-end (Site/) + revisão adversarial
-- [ ] 6. Tratar imagens (webp) + auditar responsividade (overflow 0)
-- [ ] 7. Módulos LGPD (banner + política) / tags (sem IDs → pendência)
+- [x] 5. Front-end (Site/) + revisão adversarial
+- [x] 6. Tratar imagens (webp) + auditar responsividade (overflow 0)
+- [x] 7. Módulos LGPD (banner + política) / tags (sem IDs → pendência)
 - [ ] 8. Revisão humana
 - [ ] 9. Deploy (deploy-vercel/ + public_html/) — gate humano
 
