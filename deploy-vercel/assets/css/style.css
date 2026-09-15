@@ -131,12 +131,6 @@ em,.it{font-style:italic}
 .hero__stats .st .n{font-family:var(--serif);font-size:clamp(1.9rem,3vw,2.7rem);line-height:1;color:#fff;letter-spacing:-.02em}
 .hero__stats .st .n b{color:var(--cyan);font-weight:400}
 .hero__stats .st .l{margin-top:7px;font-size:.82rem;color:#B9C7CE;letter-spacing:.01em}
-/* scroll cue */
-.hero__cue{position:absolute;left:50%;bottom:20px;z-index:2;transform:translateX(-50%);
-  font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.6);text-transform:uppercase;
-  display:flex;flex-direction:column;align-items:center;gap:8px}
-.hero__cue i{display:block;width:1px;height:34px;background:linear-gradient(rgba(255,255,255,.7),transparent);animation:cue 2.4s var(--e) infinite}
-@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
 /* entrada do texto do hero (no load, com stagger) */
 @media (prefers-reduced-motion:no-preference){
@@ -275,12 +269,13 @@ em,.it{font-style:italic}
 /* ==========================================================================
    MATERIALIDADE — amostras de acabamento + specs técnicas (dark spread)
    ========================================================================== */
-.matgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,72px);align-items:center}
-.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.sw{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--navy-950)}
-.sw img{width:100%;height:100%;object-fit:cover}
-.sw span{position:absolute;left:0;bottom:0;right:0;padding:9px 10px;font-family:var(--mono);font-size:10.5px;
-  letter-spacing:.04em;color:#eaf3f5;background:linear-gradient(0deg,rgba(5,32,46,.86),transparent)}
+.matgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.swatches{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.sw{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--navy-950)}
+.sw img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--e)}
+.sw:hover img{transform:scale(1.06)}
+.sw span{position:absolute;left:0;bottom:0;right:0;padding:12px 14px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.06em;color:#eaf3f5;background:linear-gradient(0deg,rgba(5,32,46,.9),transparent)}
 .speclist{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--line-d)}
 .speclist li{display:grid;grid-template-columns:1fr auto;gap:14px;padding:13px 0;border-bottom:1px solid var(--line-d);align-items:baseline}
 .speclist li .k{color:var(--paper-d);font-size:.92rem}
