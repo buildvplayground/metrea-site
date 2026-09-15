@@ -221,6 +221,17 @@ em,.it{font-style:italic}
 .dark .chip{color:var(--paper-d);border-color:var(--line-d);background:transparent}
 
 /* ==========================================================================
+   DIFERENCIAIS — grade editorial de 4 colunas
+   ========================================================================== */
+.difs{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.difs .d{padding:28px 28px 8px 0;border-right:1px solid var(--line)}
+.difs .d:last-child{border-right:0;padding-right:0}
+.difs .d h3{font-family:var(--serif);font-size:1.32rem;color:var(--ink);margin-bottom:12px;letter-spacing:-.01em;line-height:1.1}
+.difs .d p{font-size:.94rem;color:var(--ink-2)}
+@media (max-width:860px){.difs{grid-template-columns:1fr 1fr}.difs .d{border-bottom:1px solid var(--line);padding-right:24px}.difs .d:nth-child(2n){border-right:0;padding-right:0}}
+@media (max-width:520px){.difs{grid-template-columns:1fr}.difs .d{border-right:0;padding-right:0}}
+
+/* ==========================================================================
    MATERIALIDADE — amostras de acabamento + specs técnicas (dark spread)
    ========================================================================== */
 .matgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,72px);align-items:center}
