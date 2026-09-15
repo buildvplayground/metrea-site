@@ -54,6 +54,40 @@
     addEventListener("scroll",flush,{passive:true});
   }
 
+  /* ---------- Hero: entrada no load ---------- */
+  var hero=document.querySelector("[data-hero]");
+  if(hero){
+    if(REDUCE)hero.classList.add("ready");
+    else{requestAnimationFrame(function(){requestAnimationFrame(function(){hero.classList.add("ready");});});
+      setTimeout(function(){hero.classList.add("ready");},400);}
+  }
+
+  /* ---------- Bandas full-width: cortina de revelação ---------- */
+  var bands=[].slice.call(document.querySelectorAll("[data-band]"));
+  if(REDUCE)bands.forEach(function(b){b.classList.add("in");});
+  else{
+    var iob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");iob.unobserve(e.target);}});},{threshold:.2});
+    bands.forEach(function(b){iob.observe(b);});
+    addEventListener("scroll",function(){bands.forEach(function(b){if(!b.classList.contains("in")&&b.getBoundingClientRect().top<innerHeight*.85)b.classList.add("in");});},{passive:true});
+  }
+
+  /* ---------- Parallax elegante (translateY conforme scroll) ---------- */
+  var pxEls=[].slice.call(document.querySelectorAll("[data-parallax]"));
+  if(!REDUCE&&pxEls.length){
+    var pxTick=false;
+    function parallax(){
+      pxTick=false; var vh=innerHeight;
+      pxEls.forEach(function(el){
+        var r=el.getBoundingClientRect(); if(r.bottom<-100||r.top>vh+100)return;
+        var speed=parseFloat(el.getAttribute("data-parallax"))||.1;
+        var center=r.top+r.height/2, off=(center-vh/2)*-speed;
+        el.style.transform="translate3d(0,"+off.toFixed(1)+"px,0)";
+      });
+    }
+    addEventListener("scroll",function(){if(!pxTick){pxTick=true;requestAnimationFrame(parallax);}},{passive:true});
+    addEventListener("resize",parallax); parallax();
+  }
+
   /* ---------- Contadores ---------- */
   function animCount(el){
     var t=+el.getAttribute("data-count"),dur=1500,t0=null;

@@ -46,28 +46,25 @@
 <main>
 
 <!-- ===================== HERO ===================== -->
-<section class="hero wrap" id="hero">
-  <div class="grid">
-    <div class="hero__txt">
-      <p class="kicker"><span class="rule"></span>Sistemas construtivos de alto padrão</p>
-      <h1 class="display h1">Precisão do <em>início</em> ao fim</h1>
-      <p class="hero__sub">Da medição milimétrica à instalação final, projetamos, fabricamos e instalamos sistemas construtivos a seco que se encaixam com exatidão.</p>
-      <div class="hero__cta">
-        <a class="btn cyan" data-wa href="#"><span>Falar com um especialista</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l7 6-7 6" stroke="currentColor" stroke-width="2"/></svg></a>
-        <a class="tlink" href="#solucoes">Ver soluções<span class="u"></span></a>
-      </div>
-      <div class="hero__stats" data-rev="soft">
-        <div class="st"><div class="n"><b>+</b><span data-count="12">0</span></div><div class="l">anos no mercado</div></div>
-        <div class="st"><div class="n"><b>+</b><span data-count="500">0</span> <span class="serif" style="font-size:.5em">mil m²</span></div><div class="l">instalados</div></div>
-        <div class="st"><div class="n"><b>+</b><span data-count="200">0</span></div><div class="l">clientes atendidos</div></div>
-        <div class="st"><div class="n"><span data-count="23">0</span></div><div class="l">estados do Brasil</div></div>
-      </div>
+<section class="hero" id="hero" data-hero>
+  <div class="hero__media" data-parallax="0.12"><img src="assets/img/hero-wide.webp" alt="Fachada ventilada em painéis HPL Trespa" fetchpriority="high"></div>
+  <div class="hero__scrim"></div>
+  <div class="hero__inner">
+    <p class="kicker" data-hrev>Sistemas construtivos de alto padrão</p>
+    <h1 class="display h1" data-hrev>Precisão do <em>início</em> ao fim</h1>
+    <p class="hero__sub" data-hrev>Da medição milimétrica à instalação final, projetamos, fabricamos e instalamos sistemas construtivos a seco que se encaixam com exatidão.</p>
+    <div class="hero__cta" data-hrev>
+      <a class="btn cyan" data-wa href="#"><span>Falar com um especialista</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l7 6-7 6" stroke="currentColor" stroke-width="2"/></svg></a>
+      <a class="tlink" href="#solucoes">Ver soluções<span class="u"></span></a>
     </div>
-    <figure class="hero__fig" data-rev="fig">
-      <img src="assets/img/hero.webp" alt="Fachada ventilada em painéis HPL" fetchpriority="high">
-      <figcaption class="cap">Fachada ventilada em HPL · sistema Trespa®</figcaption>
-    </figure>
+    <div class="hero__stats" data-hrev>
+      <div class="st"><div class="n"><b>+</b><span data-count="12">0</span></div><div class="l">anos no mercado</div></div>
+      <div class="st"><div class="n"><b>+</b><span data-count="500">0</span> <span class="serif" style="font-size:.5em">mil m²</span></div><div class="l">instalados</div></div>
+      <div class="st"><div class="n"><b>+</b><span data-count="200">0</span></div><div class="l">clientes atendidos</div></div>
+      <div class="st"><div class="n"><span data-count="23">0</span></div><div class="l">estados do Brasil</div></div>
+    </div>
   </div>
+  <div class="hero__cue" aria-hidden="true"><span>Role</span><i></i></div>
 </section>
 
 <!-- ===================== QUEM SOMOS ===================== -->
@@ -218,6 +215,16 @@
   </div>
 </section>
 
+<!-- ===================== BANDA FULL-WIDTH ===================== -->
+<section class="fullband" data-band aria-label="Fachada ventilada">
+  <div class="fullband__media" data-parallax="0.16"><img src="assets/img/band-facade.webp" alt="Fachada ventilada em HPL ao entardecer"></div>
+  <div class="fullband__scrim"></div>
+  <div class="fullband__inner">
+    <span class="kicker" data-rev>Precisão do início ao fim</span>
+    <p class="q display" data-rev>Da medição milimétrica à <em>instalação final</em>, um só sistema.</p>
+  </div>
+</section>
+
 <!-- ===================== OBRAS (índice) ===================== -->
 <section class="sec panel" id="obras">
   <div class="wrap">
@@ -246,8 +253,10 @@
 </section>
 
 <!-- ===================== CTA ===================== -->
-<section class="sec dark cta" id="contato">
-  <div class="wrap">
+<section class="sec dark cta cta--img" id="contato">
+  <div class="cta__media" data-parallax="0.1"><img src="assets/img/cta-bg.webp" alt=""></div>
+  <div class="cta__scrim"></div>
+  <div class="wrap" style="position:relative;z-index:2">
     <div class="slabel"><span class="no">08</span><span class="kicker">Contato</span></div>
     <h2 class="display h2" data-rev>Transforme seu projeto com precisão, qualidade e tecnologia.</h2>
     <div class="row" data-rev>
