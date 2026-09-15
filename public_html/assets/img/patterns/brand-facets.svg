@@ -1,0 +1,7 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- unidade gráfica da marca: quadrado de 4 triângulos (chevron), tons de ciano -> navy -->
+  <polygon points="0,0 200,200 0,400" fill="#00BAC8"/>
+  <polygon points="400,0 200,200 400,400" fill="#0089AE"/>
+  <polygon points="0,400 200,200 400,400" fill="#054C72"/>
+  <polygon points="0,0 200,200 400,0" fill="#009ABC"/>
+</svg>
