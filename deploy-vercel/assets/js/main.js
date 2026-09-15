@@ -142,6 +142,42 @@
   var sx=0;lb.addEventListener("touchstart",function(e){sx=e.touches[0].clientX;},{passive:true});
   lb.addEventListener("touchend",function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)go(dx>0?-1:1);},{passive:true});
 
+  /* ---------- Produtos: explorador interativo ---------- */
+  var px=document.getElementById("px");
+  if(px){
+    var pxItems=[].slice.call(px.querySelectorAll(".px__item"));
+    var pxImgs=[].slice.call(px.querySelectorAll(".px__img"));
+    var pxN=document.getElementById("px-n"), pxChips=document.getElementById("px-chips");
+    var pxCur=0, pxLock=false;
+    function pxSet(i){
+      i=(i+pxItems.length)%pxItems.length; pxCur=i;
+      pxItems.forEach(function(it,k){var a=k===i;it.classList.toggle("is-active",a);it.setAttribute("aria-selected",a?"true":"false");});
+      pxImgs.forEach(function(im,k){im.classList.toggle("is-active",k===i);});
+      if(pxN)pxN.textContent=("0"+(i+1)).slice(-2);
+      if(pxChips){pxChips.textContent=pxItems[i].getAttribute("data-chips")||"";pxChips.classList.add("show");}
+    }
+    pxItems.forEach(function(it,i){
+      it.addEventListener("click",function(){pxLock=true;pxSet(i);});
+      if(FINE)it.addEventListener("pointerenter",function(){if(!pxLock)pxSet(i);});
+      it.addEventListener("focus",function(){pxSet(i);});
+      it.addEventListener("keydown",function(e){
+        if(e.key==="ArrowDown"||e.key==="ArrowRight"){e.preventDefault();pxItems[(i+1)%pxItems.length].focus();}
+        else if(e.key==="ArrowUp"||e.key==="ArrowLeft"){e.preventDefault();pxItems[(i-1+pxItems.length)%pxItems.length].focus();}
+      });
+    });
+    if(FINE){px.addEventListener("pointerleave",function(){pxLock=false;});}
+    pxSet(0);
+  }
+
+  /* ---------- Merlin (popup de orçamento) com fallback WhatsApp ---------- */
+  /* CTAs "Faça um orçamento" abrem o Merlin quando disponível; o float .wafab é sempre WhatsApp */
+  [].forEach.call(document.querySelectorAll("[data-wa]:not(.wafab)"),function(a){
+    a.addEventListener("click",function(e){
+      var m=document.querySelector(".merlin-button");
+      if(m){ e.preventDefault(); try{m.click();}catch(err){window.open(a.href,"_blank","noopener");} }
+    });
+  });
+
   /* ---------- Consentimento de cookies (LGPD) + dataLayer ---------- */
   window.dataLayer=window.dataLayer||[];
   var ck=document.getElementById("cookie");

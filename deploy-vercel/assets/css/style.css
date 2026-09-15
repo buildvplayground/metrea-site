@@ -104,6 +104,13 @@ em,.it{font-style:italic}
 
 .progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:81;background:var(--cyan)}
 
+/* WhatsApp flutuante (à esquerda, para não colidir com o widget do Merlin à direita) */
+.wafab{position:fixed;left:20px;bottom:20px;z-index:70;width:54px;height:54px;border-radius:50%;
+  display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 30px rgba(5,26,38,.28);
+  transition:transform .3s var(--e),box-shadow .3s var(--e)}
+.wafab:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 36px rgba(5,26,38,.34)}
+@media (max-width:560px){.wafab{width:50px;height:50px;left:16px;bottom:16px}}
+
 /* ==========================================================================
    HERO — full-bleed (imagem cheia + texto sobreposto), entrada elegante
    ========================================================================== */
@@ -219,6 +226,47 @@ em,.it{font-style:italic}
 .chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-2);
   border:1px solid var(--line);padding:6px 11px;border-radius:2px;background:var(--white)}
 .dark .chip{color:var(--paper-d);border-color:var(--line-d);background:transparent}
+
+/* ==========================================================================
+   PRODUTOS — explorador interativo (stage crossfade + lista serif)
+   ========================================================================== */
+.px{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(26px,4.5vw,60px);align-items:stretch}
+.px__stage{position:relative;overflow:hidden;background:var(--navy-950);aspect-ratio:4/5;min-height:340px}
+.px__imgs{position:absolute;inset:0}
+.px__img{position:absolute;inset:0;opacity:0;transform:scale(1.05);
+  transition:opacity 1s var(--e),transform 1.4s var(--e);pointer-events:none}
+.px__img.is-active{opacity:1;transform:scale(1)}
+.px__img img{width:100%;height:100%;object-fit:cover}
+.px__stage::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,26,38,.72),transparent 46%);pointer-events:none}
+.px__count{position:absolute;top:18px;left:18px;z-index:2;font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:#fff}
+.px__count i{color:rgba(255,255,255,.6);font-style:normal}
+.px__chips{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;font-family:var(--mono);
+  font-size:11px;letter-spacing:.04em;color:#dceaee;opacity:0;transform:translateY(6px);transition:opacity .5s var(--e),transform .5s var(--e)}
+.px__chips.show{opacity:1;transform:none}
+
+.px__list{display:flex;flex-direction:column;justify-content:center;border-top:1px solid var(--line)}
+.px__item{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:start;text-align:left;
+  padding:clamp(16px,2.2vw,24px) 0;border-bottom:1px solid var(--line);cursor:pointer;width:100%;
+  transition:padding-left .45s var(--e)}
+.px__item:hover,.px__item:focus-visible{padding-left:12px;outline:none}
+.px__no{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--ink-3);padding-top:8px;transition:color .3s}
+.px__item.is-active .px__no{color:var(--cyan-ink)}
+.px__name{display:block;font-size:clamp(1.4rem,2.2vw,2rem);color:var(--ink);letter-spacing:-.01em;line-height:1.05;transition:color .3s}
+.px__item.is-active .px__name{color:var(--cyan-ink)}
+.px__desc{display:block;overflow:hidden;max-height:0;opacity:0;color:var(--ink-2);font-size:.95rem;line-height:1.5;
+  transition:max-height .55s var(--e),opacity .5s var(--e),margin .55s var(--e)}
+.px__item.is-active .px__desc{max-height:9em;opacity:1;margin-top:10px}
+.px__ar{align-self:center;color:var(--ink-3);transition:transform .4s var(--e),color .3s;transform:translateX(-4px);opacity:0}
+.px__item.is-active .px__ar{opacity:1;transform:none;color:var(--cyan-ink)}
+@media (prefers-reduced-motion:reduce){.px__img{transition:opacity .01s;transform:none}.px__img.is-active{transform:none}}
+@media (max-width:860px){
+  .px{grid-template-columns:1fr;gap:0}
+  .px__stage{aspect-ratio:16/11;order:-1;margin-bottom:22px}
+  .px__list{border-top:0}
+  .px__desc{max-height:9em;opacity:1;margin-top:10px}       /* mobile: sempre visível */
+  .px__item{grid-template-columns:auto 1fr;}
+  .px__ar{display:none}
+}
 
 /* ==========================================================================
    DIFERENCIAIS — grade editorial de 4 colunas

@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Tag Manager — o site atual (metrea.one) usa GTM4WP porém SEM container configurado.
+     Assim que houver o ID real (GTM-XXXXXXX), descomente o bloco abaixo e o noscript no <body>. -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+-->
 <title>Métrea · Precisão do início ao fim</title>
 <meta name="description" content="Fachadas ventiladas em HPL Trespa, divisórias sanitárias, revestimento de paredes em HPL e lockers. Da medição milimétrica à instalação final, com precisão de engenharia.">
 <meta name="theme-color" content="#F1F3F4">
@@ -88,35 +93,51 @@
 <section class="sec panel" id="produtos">
   <div class="wrap">
     <div class="slabel"><span class="kicker">Produtos</span></div>
-    <h2 class="display h2" data-rev style="max-width:22ch;margin-bottom:clamp(30px,5vw,56px)">Produtos premium com tecnologia de ponta para todas as necessidades.</h2>
+    <h2 class="display h2" data-rev style="max-width:22ch;margin-bottom:clamp(30px,5vw,52px)">Produtos premium com tecnologia de ponta para todas as necessidades.</h2>
 
-    <article class="spread" data-rev>
-      <figure class="fig"><img src="assets/img/sol-divisorias.webp" alt="Divisórias sanitárias em HPL com ferragens em aço inox"></figure>
-      <div><div class="no">Produto 01</div><h3 class="display h3">Divisórias sanitárias</h3>
-        <p>Divisórias de alta resistência para ambientes comerciais, shoppings, aeroportos e espaços corporativos.</p>
-        <div class="specs"><span class="chip">Métrea Frame</span><span class="chip">Inox</span><span class="chip">Float</span><span class="chip">AL</span><span class="chip">Piso Teto</span><span class="chip">Suspensa</span></div></div>
-    </article>
+    <div class="px" data-rev id="px">
+      <div class="px__stage">
+        <div class="px__imgs">
+          <figure class="px__img is-active" data-i="0"><img src="assets/img/sol-divisorias.webp" alt="Divisórias sanitárias em HPL com ferragens em aço inox"></figure>
+          <figure class="px__img" data-i="1"><img src="assets/img/sol-lockers.webp" alt="Lockers e armários em HPL para vestiários e academias" loading="lazy"></figure>
+          <figure class="px__img" data-i="2"><img src="assets/img/sol-revestimento.webp" alt="Revestimento de parede interna em HPL" loading="lazy"></figure>
+          <figure class="px__img" data-i="3"><img src="assets/img/sol-fachada.webp" alt="Fachada ventilada em painéis HPL Trespa" loading="lazy"></figure>
+        </div>
+        <div class="px__count"><span id="px-n">01</span> <i>/ 04</i></div>
+        <div class="px__chips" id="px-chips" aria-hidden="true"></div>
+      </div>
 
-    <article class="spread rev" data-rev>
-      <figure class="fig"><img src="assets/img/sol-lockers.webp" alt="Lockers e armários em HPL para vestiários e academias"></figure>
-      <div><div class="no">Produto 02</div><h3 class="display h3">Lockers e armários</h3>
-        <p>Sistemas de armários inteligentes. Ideais para academias, empresas, escolas e espaços de alta circulação.</p>
-        <div class="specs"><span class="chip">Antiumidade</span><span class="chip">Alta circulação</span><span class="chip">Trinco com chave</span></div></div>
-    </article>
-
-    <article class="spread" data-rev>
-      <figure class="fig"><img src="assets/img/sol-revestimento.webp" alt="Revestimento de parede interna em HPL"></figure>
-      <div><div class="no">Produto 03</div><h3 class="display h3">Revestimentos em HPL</h3>
-        <p>Painéis de laminado de alta pressão (HPL) para paredes e mobiliário, garantindo manutenção simplificada.</p>
-        <div class="specs"><span class="chip">Lavável</span><span class="chip">Resistente</span><span class="chip">Fixação invisível</span></div></div>
-    </article>
-
-    <article class="spread rev" data-rev>
-      <figure class="fig"><img src="assets/img/sol-fachada.webp" alt="Fachada ventilada em painéis HPL Trespa"></figure>
-      <div><div class="no">Produto 04</div><h3 class="display h3">Fachadas ventiladas</h3>
-        <p>Em parceria com a líder global TRESPA®, oferecemos soluções para fachadas com estética incomparável.</p>
-        <div class="specs"><span class="chip">Trespa®</span><span class="chip">6 / 8 / 10 mm</span><span class="chip">Fixação oculta</span></div></div>
-    </article>
+      <div class="px__list" role="tablist" aria-label="Produtos Métrea">
+        <button class="px__item is-active" role="tab" aria-selected="true" data-i="0"
+          data-chips="Métrea Frame · Inox · Float · AL · Piso Teto · Suspensa">
+          <span class="px__no">01</span>
+          <span class="px__body"><span class="px__name display">Divisórias sanitárias</span>
+          <span class="px__desc">Divisórias de alta resistência para ambientes comerciais, shoppings, aeroportos e espaços corporativos.</span></span>
+          <span class="px__ar" aria-hidden="true">→</span>
+        </button>
+        <button class="px__item" role="tab" aria-selected="false" data-i="1"
+          data-chips="Antiumidade · Alta circulação · Trinco com chave">
+          <span class="px__no">02</span>
+          <span class="px__body"><span class="px__name display">Lockers e armários</span>
+          <span class="px__desc">Sistemas de armários inteligentes. Ideais para academias, empresas, escolas e espaços de alta circulação.</span></span>
+          <span class="px__ar" aria-hidden="true">→</span>
+        </button>
+        <button class="px__item" role="tab" aria-selected="false" data-i="2"
+          data-chips="Lavável · Resistente · Fixação invisível">
+          <span class="px__no">03</span>
+          <span class="px__body"><span class="px__name display">Revestimentos em HPL</span>
+          <span class="px__desc">Painéis de laminado de alta pressão (HPL) para paredes e mobiliário, garantindo manutenção simplificada.</span></span>
+          <span class="px__ar" aria-hidden="true">→</span>
+        </button>
+        <button class="px__item" role="tab" aria-selected="false" data-i="3"
+          data-chips="Trespa® · 6 / 8 / 10 mm · Fixação oculta">
+          <span class="px__no">04</span>
+          <span class="px__body"><span class="px__name display">Fachadas ventiladas</span>
+          <span class="px__desc">Em parceria com a líder global TRESPA®, oferecemos soluções para fachadas com estética incomparável.</span></span>
+          <span class="px__ar" aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -327,6 +348,15 @@
   <img id="lb-img" src="" alt="">
   <button class="lb__nav next" id="lb-next" aria-label="Próxima">›</button>
 </div>
+
+<!-- WhatsApp flutuante (fallback sempre acessível) -->
+<a class="wafab" data-wa href="#" aria-label="Falar no WhatsApp" title="WhatsApp">
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.6c1.7.9 3.7 1.4 5.8 1.4h.01C22.6 28.8 28 23.4 28 16.8 28 9.9 22.6 3 16 3zm0 23.2c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 .9-4.7-.3-.4C5.5 18.9 5 17 5 15 5 9.5 9.9 5 16 5s11 4.9 11 10.8S22.1 26.2 16 26.2zm5.7-7.9c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 2 .8 2.7.9 3.7.8.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<!-- Merlin (popup de orçamento) — mesma origem do site atual -->
+<script src="https://scripts.gomerlin.com.br/merlin.js"></script>
+<script>try{Merlin.Popup.initFromSource("https://tools.gomerlin.com.br/popup/a2045153-0f9f-49dd-8535-bddd77751019");}catch(e){}</script>
 
 <script src="assets/js/main.js"></script>
 </body>
