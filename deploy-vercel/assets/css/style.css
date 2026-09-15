@@ -104,13 +104,6 @@ em,.it{font-style:italic}
 
 .progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:81;background:var(--cyan)}
 
-/* WhatsApp flutuante (à esquerda, para não colidir com o widget do Merlin à direita) */
-.wafab{position:fixed;left:20px;bottom:20px;z-index:70;width:54px;height:54px;border-radius:50%;
-  display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 30px rgba(5,26,38,.28);
-  transition:transform .3s var(--e),box-shadow .3s var(--e)}
-.wafab:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 36px rgba(5,26,38,.34)}
-@media (max-width:560px){.wafab{width:50px;height:50px;left:16px;bottom:16px}}
-
 /* ==========================================================================
    HERO — full-bleed (imagem cheia + texto sobreposto), entrada elegante
    ========================================================================== */
