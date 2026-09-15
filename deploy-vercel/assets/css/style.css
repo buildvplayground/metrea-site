@@ -19,8 +19,8 @@
   --line-d2:rgba(255,255,255,.10);
   --paper-d:#C7D2D8;        /* texto claro secundário sobre navy */
 
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --sans:"Barlow",system-ui,-apple-system,sans-serif;
+  --serif:"Raleway",system-ui,-apple-system,sans-serif;   /* títulos / display (header) */
+  --sans:"Rethink Sans",system-ui,-apple-system,sans-serif; /* corpo */
   --mono:"IBM Plex Mono",ui-monospace,monospace;
 
   --wrap:1280px; --measure:66ch;
@@ -46,7 +46,7 @@ p{margin:0}
 /* ---------- type ---------- */
 .serif{font-family:var(--serif)}
 .mono{font-family:var(--mono)}
-.display{font-family:var(--serif);font-weight:400;line-height:1.01;letter-spacing:-.015em}
+.display{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacing:-.02em}
 .h1{font-size:clamp(2.7rem,5.8vw,5.3rem)}
 .h2{font-size:clamp(2.2rem,4.6vw,3.9rem);line-height:1.03}
 .h3{font-size:clamp(1.5rem,2.6vw,2.15rem);line-height:1.06}
