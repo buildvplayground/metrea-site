@@ -283,6 +283,11 @@ em,.it{font-style:italic}
 /* ==========================================================================
    MATERIALIDADE — amostras de acabamento + specs técnicas (dark spread)
    ========================================================================== */
+/* textura sutil de fachada (grade de janelas recolorida da marca — _patterns/Frame 62) */
+.secgrid{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url("../img/patterns/facade-grid.svg") repeat;background-size:481px 270px;
+  opacity:.10;mix-blend-mode:screen;mask-image:linear-gradient(90deg,#000 0%,#000 42%,transparent 78%)}
+#materiais .wrap{position:relative;z-index:1}
 .matgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
 .swatches{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .sw{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--navy-950)}
