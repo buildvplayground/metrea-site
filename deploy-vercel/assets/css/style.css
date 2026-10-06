@@ -118,13 +118,6 @@ em,.it{font-style:italic}
 
 .progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:81;background:var(--cyan)}
 
-/* Widget do Merlin — troca o roxo padrão (#5C40F5) pelo azul da marca Métrea */
-.merlin-button-popup,
-.merlin-button.merlin-button-popup{background-color:#054C72!important;background-image:none!important;box-shadow:0 10px 30px rgba(5,32,46,.3)!important}
-.merlin-button-popup:hover{background-color:#0a5c88!important}
-.merlin-popup-container [style*="5C40F5"],
-.merlin-popup-container [style*="rgb(92, 64, 245)"]{background-color:#054C72!important;color:#fff!important}
-
 /* ==========================================================================
    HERO — full-bleed (imagem cheia + texto sobreposto), entrada elegante
    ========================================================================== */

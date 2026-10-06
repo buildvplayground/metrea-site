@@ -18,7 +18,7 @@
   ],
   "pendencias": [
     {"tipo": "whatsapp", "desc": "Numero de WhatsApp real para o CTA. Placeholder no codigo: 5511XXXXXXXXX. Telefone fixo conhecido: (11) 2548-1555.", "bloqueia": "CTA funcional"},
-    {"tipo": "merlin", "desc": "Merlin instalado (popup de orcamento, mesma origem do site atual: tools.gomerlin.com.br/popup/a2045153-0f9f-49dd-8535-bddd77751019). CTAs 'Faca um orcamento' abrem o Merlin; WhatsApp como fallback/float.", "bloqueia": "nada"},
+    {"tipo": "chat", "desc": "Chat flutuante BuildV (wid_93f0f8da3426f85120f4f474289f12fb) substituiu o Merlin. CTAs 'Faca um orcamento' abrem o chat; WhatsApp como fallback. A API do widget so autoriza a origem www.metrea.one: liberar www.metrea.com.br (e o dominio de preview) no CRM antes do deploy.", "bloqueia": "chat no dominio final"},
     {"tipo": "gtm", "desc": "O site atual (metrea.one) usa GTM4WP porem SEM container configurado (nenhum GTM-XXXXXXX encontrado). Placeholder pronto no <head> para ativar quando houver o ID real. GA4/Meta Pixel/Ads: sem IDs.", "bloqueia": "analytics"},
     {"tipo": "deploy", "desc": "Dominio e secrets (FTP/Vercel). Pastas de deploy preparadas; publicacao e gate humano.", "bloqueia": "producao"}
   ],

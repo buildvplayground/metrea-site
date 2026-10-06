@@ -169,12 +169,21 @@
     pxSet(0);
   }
 
-  /* ---------- Merlin (popup de orçamento) com fallback WhatsApp ---------- */
-  /* CTAs "Faça um orçamento" abrem o Merlin quando disponível; o float .wafab é sempre WhatsApp */
+  /* ---------- Chat flutuante BuildV com fallback WhatsApp ---------- */
+  /* CTAs "Faça um orçamento" abrem o chat quando ele já montou; o widget não expõe API,
+     então clica no launcher dentro do shadow root (span no <body>) */
+  function chatLauncher(){
+    var hosts=document.querySelectorAll("body > span");
+    for(var i=0;i<hosts.length;i++){
+      var r=hosts[i].shadowRoot,b=r&&r.querySelector(".bv-launcher");
+      if(b)return b;
+    }
+    return null;
+  }
   [].forEach.call(document.querySelectorAll("[data-wa]:not(.wafab)"),function(a){
     a.addEventListener("click",function(e){
-      var m=document.querySelector(".merlin-button");
-      if(m){ e.preventDefault(); try{m.click();}catch(err){window.open(a.href,"_blank","noopener");} }
+      var b=chatLauncher();
+      if(b){ e.preventDefault(); try{b.click();}catch(err){window.open(a.href,"_blank","noopener");} }
     });
   });
 
