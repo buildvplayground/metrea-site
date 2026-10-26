@@ -187,14 +187,15 @@
     });
   });
 
-  /* ---------- Consentimento de cookies (LGPD) + dataLayer ---------- */
+  /* ---------- Aviso de cookies (LGPD, informativo: as tags disparam desde o carregamento) ---------- */
   window.dataLayer=window.dataLayer||[];
-  var ck=document.getElementById("cookie");
-  function consent(v){try{localStorage.setItem("metrea_consent",v);}catch(e){}window.dataLayer.push({event:"cookie_consent",consent:v,analytics_storage:v==="accepted"?"granted":"denied",ad_storage:v==="accepted"?"granted":"denied"});ck.classList.remove("show");}
-  var saved=null;try{saved=localStorage.getItem("metrea_consent");}catch(e){}
-  if(!saved)setTimeout(function(){ck.classList.add("show");},1400);
-  else window.dataLayer.push({event:"cookie_consent",consent:saved,analytics_storage:saved==="accepted"?"granted":"denied",ad_storage:saved==="accepted"?"granted":"denied"});
-  var cy=document.getElementById("ck-yes"),cn=document.getElementById("ck-no");
-  if(cy)cy.addEventListener("click",function(){consent("accepted");});
-  if(cn)cn.addEventListener("click",function(){consent("rejected");});
+  var ck=document.getElementById("cookie"),ckFins=document.getElementById("cookie-fins"),ckMore=document.getElementById("ck-more"),ckOk=document.getElementById("ck-ok");
+  function finsOpen(o){if(!ckFins||!ckMore)return;ckFins.hidden=!o;ckMore.setAttribute("aria-expanded",o?"true":"false");}
+  var seen=null;try{seen=localStorage.getItem("cookie_notice");}catch(e){}
+  if(ck){
+    if(seen!=="ok")setTimeout(function(){ck.classList.add("show");},1400);
+    if(ckOk)ckOk.addEventListener("click",function(){try{localStorage.setItem("cookie_notice","ok");}catch(e){}ck.classList.remove("show");});
+    if(ckMore)ckMore.addEventListener("click",function(){finsOpen(ckFins.hidden);});
+    [].forEach.call(document.querySelectorAll("[data-cookie-prefs]"),function(b){b.addEventListener("click",function(e){e.preventDefault();ck.classList.add("show");finsOpen(true);if(ckOk)ckOk.focus();});});
+  }
 })();
