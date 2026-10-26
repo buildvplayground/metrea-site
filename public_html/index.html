@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Saira:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=2">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Métrea","slogan":"Precisão do início ao fim","url":"https://www.metrea.com.br","logo":"https://www.metrea.com.br/assets/img/logo/metrea-icon.png","foundingDate":"2013","email":"contato@metrea.com.br","telephone":"+55-11-2548-1555","address":{"@type":"PostalAddress","streetAddress":"Rua Moisés Kauffmann, 310, Barra Funda","addressLocality":"São Paulo","addressRegion":"SP","postalCode":"01140-010","addressCountry":"BR"},"description":"Sistemas construtivos a seco de alto padrão: fachadas ventiladas em HPL Trespa, divisórias sanitárias, revestimento de paredes em HPL e lockers."}
 </script>
@@ -321,7 +321,7 @@
         <li><a href="tel:+551125481555">(11) 2548-1555</a></li>
         <li><a href="mailto:contato@metrea.com.br">contato@metrea.com.br</a></li>
         <li>Rua Moisés Kauffmann, 310<br>Barra Funda, São Paulo/SP, 01140-010</li>
-        <li><a href="politica-de-privacidade.html">Privacidade e cookies</a></li></ul></div>
+        <li><a href="politica-de-privacidade.html" data-cookie-prefs>Cookies</a></li></ul></div>
     </div>
     <div class="bottom">
       <span>© <span id="yr">2026</span> Métrea. Todos os direitos reservados.</span>
@@ -336,8 +336,13 @@
 <!-- ===================== COOKIES ===================== -->
 <div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
   <div class="in">
-    <p>Usamos cookies para melhorar sua experiência e analisar o tráfego. Ao continuar, você concorda com nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
-    <div class="acts"><button class="btn ghost" id="ck-no">Recusar</button><button class="btn cyan" id="ck-yes">Aceitar</button></div>
+    <p>Usamos cookies para o site funcionar, medir a audiência e mostrar anúncios a quem já nos visitou. Saiba mais na <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+    <div class="acts"><button type="button" class="btn ghost" id="ck-more" aria-expanded="false" aria-controls="cookie-fins">Ver finalidades</button><button type="button" class="btn cyan" id="ck-ok">Entendi</button></div>
+    <ul class="cookie-fins" id="cookie-fins" hidden>
+      <li><strong>Essenciais:</strong> fazem o site funcionar.</li>
+      <li><strong>Análise:</strong> Google Analytics, para saber quais páginas e botões funcionam.</li>
+      <li><strong>Publicidade:</strong> Google Ads, Meta e LinkedIn, para mostrar anúncios a quem já visitou o site.</li>
+    </ul>
   </div>
 </div>
 
@@ -353,6 +358,6 @@
 <!-- Chat flutuante BuildV (atendimento/orçamento) -->
 <script src="https://app-crm.buildv.com.br/widget.js" data-widget="wid_93f0f8da3426f85120f4f474289f12fb" data-api="https://crm-clients-api.buildv.com.br" async></script>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=2"></script>
 </body>
 </html>
